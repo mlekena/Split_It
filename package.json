@@ -1,0 +1,19 @@
+{
+  "name": "split_it",
+  "version": "0.0.1",
+  "description": "This is an app that allows users to order food online with people near them and split bills or the actuall food",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlekena/Split_It.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlekena/Split_It/issues"
+  },
+  "homepage": "https://github.com/mlekena/Split_It#readme"
+}
