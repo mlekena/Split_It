@@ -8,7 +8,7 @@ router.get('/', function(request,response){
 
 router.route('/register')
 	.get(function(request,response){
-	response.send('<h1>Register...coming soon</h1>');
+	response.send('register</h1>');
 })
 	.post(function(request, response){
 		response.send('request.params.');
@@ -19,7 +19,10 @@ router.route('/login')
 	response.render('login');
 })
 	.post(function(request,response){
-	response.send(request.params.password);	
+		var user = {
+			email
+		};
+	response.send('got it finally');	
 });
 
 router.get('/dashboard', function(request,response){
