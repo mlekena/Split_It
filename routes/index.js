@@ -9,7 +9,7 @@ router.get('/', function(request,response){
 
 router.route('/register')
 	.get(function(request,response){
-	response.send('register');
+	response.render('register');
 })
 	.post(function(request, response){
 		var currentUser = {
