@@ -10,11 +10,11 @@ app.get('/splitit', function(request,response){
 });
 
 app.get('/splitit/register', function(request,response){
-	response.send('<h1></h1>');
+	response.send('<h1>Register...coming soon</h1>');
 });
 
 app.get('/splitit/login', function(request,response){
-	response.render('index');
+	response.send('<h1>login...coming soon</h1>');
 });
 //SHOULD BE THE LAST ROUTE IN FILE
 
