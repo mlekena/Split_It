@@ -1,0 +1,29 @@
+data variable format
+if request === true
+	newRequest{
+			name: 
+			orderby: 
+			deliverypoint: 
+		}
+		<h1>Hello <%= newRequest.name%></h1>
+
+
+if login === true
+	var currentUser = {
+			firstname: ,
+			lastname: 
+			emailaddress: 
+			password: ,
+			birthday: 
+			collegename: 
+		};
+
+if register === true
+	var currentUser = {
+			firstname: 
+			lastname: 
+			emailaddress: 
+			password: 
+			birthday: 
+			collegename: 
+		};
