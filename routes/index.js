@@ -1,7 +1,7 @@
 //ROUTER
 var express = require('express');
 var router = express.Router();
-var appUsers = require('../testusers.json');
+//var appUsers = require('../testusers.json');
 
 router.get('/', function(request,response){
 	response.render('index');
@@ -29,11 +29,12 @@ router.route('/login')
 		response.render('login');
 	})
 	.post(function(request,response){
-
-		response.render('dashboard', {
+		var currentUser = {
+			firstname: "Theko Test",
 			emailaddress: request.body.emailaddress,
 			password: request.body.password
-	});	
+			};
+		response.render('dashboard',{currentUser: currentUser} );	
 });
 
 router.get('/dashboard', function(request,response){
