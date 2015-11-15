@@ -1,21 +1,22 @@
 //This is the entry point for the application
 var express = require('express');
+var path = require('path');
+var bodyParser = require('body-parser');
+var routes = require('./routes/index');
+
 var app = express();
 
 //define our render engine. It will allow use to embed Javascript in our HTML page. file extention is .ets
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+//allows our app to arse files with easy
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+
 app.use(express.static('views'));
-app.get('/splitit', function(request,response){
-	response.render('index');
-});
+app.use('/',routes)
 
-app.get('/splitit/register', function(request,response){
-	response.send('<h1>Register...coming soon</h1>');
-});
-
-app.get('/splitit/login', function(request,response){
-	response.send('<h1>login...coming soon</h1>');
-});
 //SHOULD BE THE LAST ROUTE IN FILE
 
 /*app.get('*', function(request,response){
