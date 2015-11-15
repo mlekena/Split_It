@@ -19,9 +19,10 @@ router.route('/login')
 		response.render('login');
 	})
 	.post(function(request,response){
+		console.log(request.body.emailaddress);
 
 		response.render('dashboard', {
-			emailaddress: request.params.emailaddress,
+			emailaddress: request.body,
 			password: request.params.password
 	});	
 });
