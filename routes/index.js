@@ -21,7 +21,7 @@ router.route('/register')
 			collegename: request.body.college
 		};
 
-		response.render('dashboard',{currentUser: currentUser, requests: appUsers.users});
+		response.render('dashboard',{currentUser: currentUser, orderrequests: appUsers.users});
 	});
 
 router.route('/login')
@@ -34,7 +34,7 @@ router.route('/login')
 			emailaddress: request.body.emailaddress,
 			password: request.body.password
 			};
-		response.render('dashboard',{currentUser: currentUser, requests: appUsers.users} );	
+		response.render('dashboard',{currentUser: currentUser, orderrequests: appUsers.users} );	
 });
 
 router.get('/dashboard', function(request,response){
@@ -57,7 +57,7 @@ router.route('/requestform')
 
 		appUsers.users.unshift(newRequest);
 		console.log(appUsers);
-		response.render('dashboard', {requestsent: true, requests: appUsers.users});
+		response.render('dashboard', {requestsent: true, orderrequests: appUsers.users});
 });
 
 
