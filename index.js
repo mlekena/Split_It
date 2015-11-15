@@ -1,6 +1,6 @@
 //This is the entry point for the application
 var express = require('express');
-var app = express()
+var app = express();
 
 //define our render engine. It will allow use to embed Javascript in our HTML page. file extention is .ets
 app.set('view engine', 'ejs');
@@ -9,6 +9,13 @@ app.get('/splitit', function(request,response){
 	response.render('index');
 });
 
+app.get('/splitit/register', function(request,response){
+	response.send('<h1></h1>');
+});
+
+app.get('/splitit/login', function(request,response){
+	response.render('index');
+});
 //SHOULD BE THE LAST ROUTE IN FILE
 
 /*app.get('*', function(request,response){
