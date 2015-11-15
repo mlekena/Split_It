@@ -11,10 +11,14 @@ router.get('/register', function(request,response){
 });
 
 router.get('/login', function(request,response){
-	response.send('<h1>login...coming soon</h1>');
+	response.render('login');
 });
 router.get('/dashboard', function(request,response){
 	response.render('dashboard');
+});
+
+router.get('/requestform', function(request,response){
+	response.render('requestform');
 });
 
 router.get('/requestform', function(request,response){
