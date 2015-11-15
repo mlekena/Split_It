@@ -49,23 +49,47 @@
 	<!-- Main feed display box -->
 
 
-<form class="form-horizontal" style="padding-top: 50px; text-align: middle">
+<form class="form-horizontal" style="padding-top: 50px; text-align: middle" action="http://localhost:3000/register" method="post" enctype="application/x-www-form-urlencoded">
   <div class="form-group">
-    <label for="name" class="col-sm-4 control-label">Email Address</label>
+    <label for="first" class="col-sm-4 control-label">First Name</label>
     <div class="col-sm-4">
-      <input type="food" class="form-control" id="name" placeholder="user@rpi.edu">
+      <input type="first" class="form-control" id="name" name="first" placeholder="First">
     </div>
   </div>
   <div class="form-group">
-    <label for="order by" class="col-sm-4 control-label">Password</label>
+    <label for="last" class="col-sm-4 control-label">Last Name</label>
     <div class="col-sm-4">
-      <input type="orderby" class="form-control" id="name" placeholder="">
+      <input type="last" class="form-control" id="name" name="last" placeholder="Last">
     </div>
   </div>
   <div class="form-group">
-    <label for="order by" class="col-sm-4 control-label">Reenter Password</label>
+    <label for="emailAddress" class="col-sm-4 control-label">Email Address</label>
     <div class="col-sm-4">
-      <input type="orderby" class="form-control" id="name" placeholder="">
+      <input type="emailAddress" class="form-control" id="name" name="emailAddress" placeholder="user@rpi.edu">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password" class="col-sm-4 control-label">Password</label>
+    <div class="col-sm-4">
+      <input type="password" class="form-control" id="name" name="password" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="confirmPassword" class="col-sm-4 control-label">Confirm Password</label>
+    <div class="col-sm-4">
+      <input type="confirmPassword" class="form-control" id="name" name="confirmPassword" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="birthday" class="col-sm-4 control-label">Birthday</label>
+    <div class="col-sm-4">
+      <input type="birthday" class="form-control" id="name" name="birthday" placeholder="MM/DD/YYYY">
+  </div>
+  </div>
+    <div class="form-group">
+    <label for="college" class="col-sm-4 control-label">College attending</label>
+    <div class="col-sm-4">
+      <input type="college" class="form-control" id="name" name="college" placeholder="RPI">
     </div>
   </div>
   <div class="form-group">

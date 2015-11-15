@@ -1,6 +1,7 @@
 //ROUTER
 var express = require('express');
 var router = express.Router();
+//var appUsers = require('../testusers.json');
 
 router.get('/', function(request,response){
 	response.render('index');
@@ -8,10 +9,19 @@ router.get('/', function(request,response){
 
 router.route('/register')
 	.get(function(request,response){
-	response.send('register</h1>');
+	response.render('register');
 })
 	.post(function(request, response){
-		response.send('request.params.');
+		var currentUser = {
+			firstname: request.body.first,
+			lastname: request.body.last,
+			emailaddress: request.body.emailaddress,
+			password: request.body.password,
+			birthday: request.body.birthday,
+			collegename: request.body.college
+		};
+
+		response.render('dashboard',{currentUser: currentUser, worldUser: worldUser});
 	});
 
 router.route('/login')
@@ -19,12 +29,12 @@ router.route('/login')
 		response.render('login');
 	})
 	.post(function(request,response){
-		console.log(request.body.emailaddress);
-
-		response.render('dashboard', {
-			emailaddress: request.body,
-			password: request.params.password
-	});	
+		var currentUser = {
+			firstname: "Theko Test",
+			emailaddress: request.body.emailaddress,
+			password: request.body.password
+			};
+		response.render('dashboard',{currentUser: currentUser} );	
 });
 
 router.get('/dashboard', function(request,response){
@@ -37,7 +47,12 @@ router.route('/requestform')
 	response.render('requestform');
 })
 	.post(function(request,response){
-	response.send('Got the post');
+		var newRequest = {
+			name: request.body.name,
+			orderby: request.body.orderby,
+			deliverypoint: request.body.deliverypoint
+		};
+		response.render('dashboard', {requestsent: true, newRequest: newRequest});
 });
 
 
