@@ -16,14 +16,14 @@ router.route('/register')
 
 router.route('/login')
 	.get(function(request,response){
-	response.render('login');
-})
+		response.render('login');
+	})
 	.post(function(request,response){
-		var user = {
-			email: request.params.emailaddress,
-			pwd: request.params.password
-		};
-	response.send('got it finally');	
+
+		response.render('dashboard', {
+			emailaddress: request.params.emailaddress,
+			password: request.params.password
+	});	
 });
 
 router.get('/dashboard', function(request,response){
