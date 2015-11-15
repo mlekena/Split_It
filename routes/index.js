@@ -20,7 +20,8 @@ router.route('/login')
 })
 	.post(function(request,response){
 		var user = {
-			email
+			email: request.params.emailaddress,
+			pwd: request.params.password
 		};
 	response.send('got it finally');	
 });
