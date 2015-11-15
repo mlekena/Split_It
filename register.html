@@ -42,14 +42,26 @@
 	<!--Color Bar at the top of the page -->
 	<div class="container-fluid" >
 		<div class="row" style="background-color: #b48e9f; padding-left: none">
-	<h1 class="title" style="text-align: center;">Split It Login</h1>
+	<h1 class="title" style="text-align: center;">Split It Registration</h1>
 		</div>
 	</div>
 
 	<!-- Main feed display box -->
 
 
-<form class="form-horizontal" style="padding-top: 50px; text-align: middle" action="http://localhost:3000/login" method="post">
+<form class="form-horizontal" style="padding-top: 50px; text-align: middle" action="http://localhost:3000/register" method="post">
+  <div class="form-group">
+    <label for="first" class="col-sm-4 control-label">First Name</label>
+    <div class="col-sm-4">
+      <input type="first" class="form-control" id="name" name="first" placeholder="First">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="last" class="col-sm-4 control-label">Last Name</label>
+    <div class="col-sm-4">
+      <input type="last" class="form-control" id="name" name="last" placeholder="Last">
+    </div>
+  </div>
   <div class="form-group">
     <label for="email-address" class="col-sm-4 control-label">Email Address</label>
     <div class="col-sm-4">
@@ -63,8 +75,56 @@
     </div>
   </div>
   <div class="form-group">
+    <label for="confirm-password" class="col-sm-4 control-label">Confirm Password</label>
+    <div class="col-sm-4">
+      <input type="confirm-password" class="form-control" id="name" name="confirm-password" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="birthday" class="col-sm-4 control-label">Birthday</label>
+    <div class="col-sm-4">
+      <div class="dropdown">
+  		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    	  Month
+    	  <span class="caret"></span>
+  		</button>
+  		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1"name="month">
+    	  <li><a href="#">January</a></li>
+    	  <li><a href="#">February</a></li>
+    	  <li><a href="#">March</a></li>
+    	  <li><a href="#">April</a></li>
+    	  <li><a href="#">May</a></li>
+    	  <li><a href="#">June</a></li>
+    	  <li><a href="#">July</a></li>
+    	  <li><a href="#">August</a></li>
+    	  <li><a href="#">September</a></li>
+    	  <li><a href="#">October</a></li>
+    	  <li><a href="#">November</a></li>
+    	  <li><a href="#">December</a></li>
+ 		</ul>
+      </div>
+    	<input type="day" class="form-control" id="name" placeholder="Day" name="day">
+        <input type="year" class="form-control" id="name" placeholder="Year" name="year">
+	  </div>
+  </div>
+    <div class="form-group">
+    <label for="college" class="col-sm-4 control-label">College</label>
+    <div class="col-sm-4">
+      <div class="dropdown">
+  		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    	  Select one
+    	  <span class="caret"></span>
+  		</button>
+  		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" name="college">
+    	  <li><a href="#">Rensselaer Polytechnic Institute</a></li>
+    	  <li><a href="#">Skidmore College</a></li>
+ 		 </ul>
+	</div>
+    </div>
+  </div>
+  <div class="form-group">
     <div class="col-sm-offset-4 col-sm-10">
-      <button type="submit" class="btn btn-default"><a href="//localhost:3000/dashboard">Submit</a></button>
+      <button type="submit" class="btn btn-default">Submit</button>
       <button type="submit" class="btn btn-default"><a href="http://localhost:3000/">Back to FrontPage</a></button>
     </div>
   </div>
