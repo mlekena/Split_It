@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mlekena/Split_It/issues"
   },
-  "homepage": "https://github.com/mlekena/Split_It#readme"
+  "homepage": "https://github.com/mlekena/Split_It#readme",
+  "dependencies": {
+    "ejs": "^2.3.4"
+  }
 }
