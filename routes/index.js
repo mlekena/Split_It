@@ -6,23 +6,38 @@ router.get('/', function(request,response){
 	response.render('index');
 });
 
-router.get('/register', function(request,response){
+router.route('/register')
+	.get(function(request,response){
 	response.send('<h1>Register...coming soon</h1>');
+})
+	.post(function(request, response){
+		response.send("Got the post from register");
+	});
+
+router.route('login')
+	.get(function(request,response){
+	response.render('login');
+})
+	.post(function(request,response){
+	response.send('got the post from login');	
 });
 
-router.get('/login', function(request,response){
-	response.render('login');
-});
 router.get('/dashboard', function(request,response){
 	response.render('dashboard');
 });
 
-router.get('/requestform', function(request,response){
+//receive the create request form and send it to the dashboard with an updated request array.
+router.route('/requestform')
+	.get(function(request,response){
 	response.render('requestform');
+})
+	.post(function(request,response){
+	response.send('Got the post');
 });
 
-router.get('/requestform', function(request,response){
+
+/*router.get('/requestform', function(request,response){
 	response.render('requestform');
-});
+});*/
 
 module.exports = router;
