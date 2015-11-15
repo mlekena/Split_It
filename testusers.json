@@ -1,38 +1,39 @@
 {
-	{
-		"name": "Jason Waters",
-		"orderby": "12:00pm",
-		"food": "Pizza",
-		"deliverypoint": "Joto Parking Lot"
-	},
+	"users": [
+		{
+			"name": "Jason Waters",
+			"orderby": "12:00pm",
+			"food": "Pizza",
+			"deliverypoint": "Joto Parking Lot"
+		},
 
-	{
-		"name": "Michelle Jones",
-		"orderby": "11:10pm",
-		"food": "Chinese Take Out",
-		"deliverypoint": "Joto Parking Lot"
-	},
+		{
+			"name": "Michelle Jones",
+			"orderby": "11:10pm",
+			"food": "Chinese Take Out",
+			"deliverypoint": "Joto Parking Lot"
+		},
 
-	{
-		"name": "Larry Johnson ",
-		"orderby": "9:30pm",
-		"food": "Pizza",
-		"deliverypoint": "Case Center"
-	},
+		{
+			"name": "Larry Johnson ",
+			"orderby": "9:30pm",
+			"food": "Pizza",
+			"deliverypoint": "Case Center"
+		},
 
-	{
-		"name": "Amber P.",
-		"orderby": "1;:30pm",
-		"food": "Indian Food",
-		"deliverypoint": "Joto First Floor"
-	},
+		{
+			"name": "Amber P.",
+			"orderby": "1;:30pm",
+			"food": "Indian Food",
+			"deliverypoint": "Joto First Floor"
+		},
 
-	{
-		"name": "Brian L.",
-		"orderby": "10:00pm",
-		"food": "Pizza",
-		"deliverypoint": "Apartment 2I"
+		{
+			"name": "Brian L.",
+			"orderby": "10:00pm",
+			"food": "Pizza",
+			"deliverypoint": "Apartment 2I"
 
-	}
-	
+		}
+	]
 }

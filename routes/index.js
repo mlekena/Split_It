@@ -1,7 +1,7 @@
 //ROUTER
 var express = require('express');
 var router = express.Router();
-//var appUsers = require('../testusers.json');
+var appUsers = require('../testusers.json');
 
 router.get('/', function(request,response){
 	response.render('index');
@@ -21,7 +21,7 @@ router.route('/register')
 			collegename: request.body.college
 		};
 
-		response.render('dashboard',{currentUser: currentUser, worldUser: worldUser});
+		response.render('dashboard',{currentUser: currentUser, requests: appUsers.users});
 	});
 
 router.route('/login')
@@ -34,7 +34,7 @@ router.route('/login')
 			emailaddress: request.body.emailaddress,
 			password: request.body.password
 			};
-		response.render('dashboard',{currentUser: currentUser} );	
+		response.render('dashboard',{currentUser: currentUser, requests: appUsers.users} );	
 });
 
 router.get('/dashboard', function(request,response){
@@ -47,12 +47,17 @@ router.route('/requestform')
 	response.render('requestform');
 })
 	.post(function(request,response){
+
 		var newRequest = {
 			name: request.body.name,
+			food: request.body.food,
 			orderby: request.body.orderby,
 			deliverypoint: request.body.deliverypoint
 		};
-		response.render('dashboard', {requestsent: true, newRequest: newRequest});
+
+		appUsers.users.unshift(newRequest);
+		console.log(appUsers);
+		response.render('dashboard', {requestsent: true, requests: appUsers.users});
 });
 
 
