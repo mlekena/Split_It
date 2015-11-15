@@ -27,8 +27,8 @@
   		function initialize() {
     		var mapCanvas = document.getElementById('map');
     		var mapOptions = {
-    		  center: new google.maps.LatLng(40.714, -74.006),
-     		 zoom: 8,
+    		  center: new google.maps.LatLng(43.097197,-73.786916),
+     		 zoom: 18,
     		  mapTypeId: google.maps.MapTypeId.ROADMAP
   		    }
   	  	  var map = new google.maps.Map(mapCanvas, mapOptions);
@@ -60,7 +60,7 @@
 	<!-- Main feed display box -->
 
 				<div class="col-md-4">
-					<div class="row" style="padding-top: 50px; padding-left: 50px; font-size:25px;">
+					<div class="row" style="padding-top: 50px; padding-left: 30px; font-size:25px;">
 						<p style="font-size: 40px;padding-bottom: 30px;">Actions</p>
 						<p style="font-size: 20px;"><a href="http://localhost:3000/requestform">Create a Request</a></p>
 						<p style="font-size: 20px;"><a href="">Near Me </a></p>
@@ -69,7 +69,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="row" style="text-align: left; font-size: 25px;padding-bottom: 40px;">
-					</div>
+					</div> 
 				</div>
 					<!--LIVE FEED -->
 					<div class="col-md-4">
@@ -84,7 +84,9 @@
 				</div>
 				
 				<!-- Google Map for user location -->
-				<div id="map" style="width: 500px; height: 400px; background-color: #ccc"></div>
+				<div class="col-md-4">
+					<div id="map" style="width: 400px; height: 400px; background-color: #ccc"></div>
+				</div>
 			
 <!-- Main (Home) section -->
 <section class="section" id="head">
