@@ -1,5 +1,5 @@
 html {
-	background: white; 
+	background:#67515B; 
 	min-height:100%;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
@@ -140,9 +140,9 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 .subtitle { 
 	font-family: 'Wire One', Helvetica, Arial, sans-serif;
 	font-weight:normal;
-	font-size:4em;
+	font-size:7em;
 	margin-bottom:15px; 
-	color:#dfca00; 
+	color:#d4cd23; 
 	line-height:1em;
 }
 .subtitle { 
@@ -162,17 +162,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	.lead { 
 		font-size:1.3em;
 	}
-}
-
-.box {
-	border-color: black;
-	border-width: 1px;
-	border-style: solid;
-	margin: 0px 0px 30px 0px ;
-	float:middle;
-	width: 70%;
-	background-color: #ece6e8;
-
 }
 
 
@@ -373,11 +362,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 }
 .thumbnail .caption {
 	color: inherit;
-}
-
-.col-md.4 .row a: hover {
-		color: #10a2c1;
-	}
 }
 
 
