@@ -11,15 +11,15 @@ router.route('/register')
 	response.send('<h1>Register...coming soon</h1>');
 })
 	.post(function(request, response){
-		response.send("Got the post from register");
+		response.send('request.params.');
 	});
 
-router.route('login')
+router.route('/login')
 	.get(function(request,response){
 	response.render('login');
 })
 	.post(function(request,response){
-	response.send('got the post from login');	
+	response.send(request.params.password);	
 });
 
 router.get('/dashboard', function(request,response){
